@@ -42,8 +42,9 @@ into the {body} tag of the default.hbs template --}}
                     <div class="article-byline-meta">
                         <h4 class="author-name">{{authors}}</h4>
                         <div class="byline-meta-content">
-                            <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                            <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
+                            <time class="byline-meta-date" datetime="{{date format="DD-MM-YYYY"}}">{{date}}</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time
+                                        minute=(t "1 min read") minutes=(t "% min read")}}</span>
                         </div>
                     </div>
                 </section>
@@ -91,11 +92,6 @@ into the {body} tag of the default.hbs template --}}
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
 
-        {{!--
-        <section class="article-comments gh-canvas">
-            If you want to embed comments, this is a good place to paste your code!
-        </section>
-        --}}
 
     </article>
 </main>
